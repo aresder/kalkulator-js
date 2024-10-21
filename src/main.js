@@ -1,5 +1,7 @@
+let layar_hasil = document.querySelector('#layar_hasil')
+
 const tampilkanKeLayar = (value) => {
-  let hasil = document.querySelector('#hasil').value
+  let hasil = layar_hasil.value
 
   if (hasil.includes(',')) {
     hasil = hasil.replace(/,/g, '')
@@ -9,22 +11,30 @@ const tampilkanKeLayar = (value) => {
     hasil = hasil.replace(/^0+/, '')
   }
 
-  return document.querySelector('#hasil').value = hasil + value
+  return layar_hasil.value = hasil + value
 }
 
 const operasiAritmatika = () => {
-  const hasil = document.querySelector('#hasil').value
-  const proses = eval(hasil)
+  if (layar_hasil.value.includes('^')) {
+    const pisahkan = layar_hasil.value.split('^')
+    const angka1 = Number(pisahkan[0])
+    const angka2 = Number(pisahkan[1])
+    const proses = Math.pow(angka1, angka2)
+    const format = proses.toLocaleString('en-EN')
+
+    return layar_hasil.value = format
+  }
+
+  const proses = eval(layar_hasil.value)
   const format = proses.toLocaleString('en-EN')
 
-  return document.querySelector('#hasil').value = format
+  return layar_hasil.value = format
 }
 
 const spasiMundur = () => {
-  const hasil = document.querySelector('#hasil').value
-  return document.querySelector('#hasil').value = hasil.slice(0, -1)
+  return layar_hasil.value = layar_hasil.value.slice(0, -1)
 }
 
 const reset = () => {
-  return document.querySelector('#hasil').value = '0'
+  return layar_hasil.value = '0'
 }

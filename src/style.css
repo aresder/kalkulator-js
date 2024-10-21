@@ -112,6 +112,11 @@ input[value="/"] {
 }
 
 input[value="C"] {
+  grid-column: 5;
+  grid-row: 1;
+}
+
+input[value="^"] {
   grid-column: 4;
   grid-row: 1;
 }
@@ -133,7 +138,7 @@ input[value="("] {
 
 input[value="<-"] {
   grid-column: 5;
-  grid-row: 1;
+  grid-row: 2;
 }
 
 .input input {
@@ -162,7 +167,8 @@ input[value="*"],
 input[value="/"],
 input[value="%"],
 input[value=")"],
-input[value="("] {
+input[value="("],
+input[value="^"] {
   background-color: #505050;
 }
 
@@ -170,11 +176,12 @@ input[value="="] {
   background-color: #3c5b90;
 }
 
-input[value="C"] {
-  background-color: #ff0000;
+input[value="C"],
+input[value="<-"] {
+  background-color: #e30202;
 }
 
-.hasil {
+.layar_hasil {
   text-align: right;
   height: 32px;
   font-size: 24px;
