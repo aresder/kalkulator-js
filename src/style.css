@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: #eaeaea;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 10px;
+}
+
+.title {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.title small {
+  opacity: 80%;
+}
+
+.input {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+input[value="1"] {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+input[value="2"] {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+input[value="3"] {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+input[value="4"] {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+input[value="5"] {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+input[value="6"] {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+input[value="7"] {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+input[value="8"] {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+input[value="9"] {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+input[value="0"] {
+  grid-column: 1;
+  grid-row: 5;
+}
+
+input[value="."] {
+  grid-column: 2;
+  grid-row: 5;
+}
+
+input[value="="] {
+  grid-column: 3;
+  grid-row: 5;
+}
+
+input[value="+"] {
+  grid-column: 4;
+  grid-row: 5;
+}
+
+input[value="-"] {
+  grid-column: 4;
+  grid-row: 4;
+}
+
+input[value="*"] {
+  grid-column: 4;
+  grid-row: 3;
+}
+
+input[value="/"] {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+input[value="C"] {
+  grid-column: 5;
+  grid-row: 1;
+}
+
+input[value="^"] {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+input[value="%"] {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+input[value=")"] {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+input[value="("] {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+input[value="<-"] {
+  grid-column: 5;
+  grid-row: 2;
+}
+
+.input input {
+  font-size: 20px;
+  text-align: center;
+  width: 64px;
+  height: 64px;
+  background-color: #2e2e2e;
+  color: #fff;
+  border: none;
+  border-radius: 5%;
+  text-align: center;
+}
+
+.input input:hover {
+  cursor: pointer;
+}
+
+.input input:active {
+  scale: 90%;
+}
+
+input[value="+"],
+input[value="-"],
+input[value="*"],
+input[value="/"],
+input[value="%"],
+input[value=")"],
+input[value="("],
+input[value="^"] {
+  background-color: #505050;
+}
+
+input[value="="] {
+  background-color: #3c5b90;
+}
+
+input[value="C"],
+input[value="<-"] {
+  background-color: #e30202;
+}
+
+.layar_hasil {
+  text-align: right;
+  height: 32px;
+  font-size: 24px;
+  padding: 5px;
+  margin-bottom: 24px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Javascript</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">
+      <h1>Kalkulator Javascript</h1>
+      <small><i>Format angka dalam English (en-EN)</i></small>
+    </div>
+    <input type="text" id="layar_hasil" class="layar_hasil" value="0" size="24" readonly>
+    <div class="input">
+      <input type="button" value="1" onclick="tampilkanKeLayar('1')">
+      <input type="button" value="2" onclick="tampilkanKeLayar('2')">
+      <input type="button" value="3" onclick="tampilkanKeLayar('3')">
+      <input type="button" value="4" onclick="tampilkanKeLayar('4')">
+      <input type="button" value="5" onclick="tampilkanKeLayar('5')">
+      <input type="button" value="6" onclick="tampilkanKeLayar('6')">
+      <input type="button" value="7" onclick="tampilkanKeLayar('7')">
+      <input type="button" value="8" onclick="tampilkanKeLayar('8')">
+      <input type="button" value="9" onclick="tampilkanKeLayar('9')">
+      <input type="button" value="0" onclick="tampilkanKeLayar('0')">
+      <input type="button" value="." onclick="tampilkanKeLayar('.')">
+
+      <input type="button" value="(" onclick="tampilkanKeLayar('(')">
+      <input type="button" value=")" onclick="tampilkanKeLayar(')')">
+      <input type="button" value="%" onclick="tampilkanKeLayar('%')">
+      <input type="button" value="^" onclick="tampilkanKeLayar('^')">
+      <input type="button" value="/" onclick="tampilkanKeLayar('/')">
+      <input type="button" value="*" onclick="tampilkanKeLayar('*')">
+      <input type="button" value="-" onclick="tampilkanKeLayar('-')">
+      <input type="button" value="+" onclick="tampilkanKeLayar('+')">
+
+      <input type="button" value="=" onclick="operasiAritmatika()">
+      <input type="button" value="C" onclick="reset()">
+      <input type="button" value="<-" onclick="spasiMundur()">
+    </div>
+  </div>
+</body>
+
+</html>
