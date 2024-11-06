@@ -31,18 +31,30 @@ const operasiAritmatika = () => {
     document.getElementById('clear').style.visibility = 'hidden'
     document.getElementById('clear_all').style.visibility = 'visible'
 
-    if (display.value.includes('^')) {
-      const pisahkan = display.value.split('^')
-      const angka1 = Number(pisahkan[0])
-      const angka2 = Number(pisahkan[1])
-      const proses = Math.pow(angka1, angka2)
-      const format = proses.toLocaleString('en-EN')
+    if (display.value.includes('%')) {
+      const num1 = display.value.split('%')[0]
+      const num2 = display.value.split('%')[1].slice(1)
+      const operator = display.value.split('%')[1][0]
+      const percent = num1 / 100
+      const operation = Number(percent) + operator + Number(num2)
+      const process = eval(operation)
+      const format = process.toLocaleString('en-EN')
 
       return display.value = format
     }
 
-    const proses = eval(display.value)
-    const format = proses.toLocaleString('en-EN')
+    if (display.value.includes('^')) {
+      const split = display.value.split('^')
+      const num1 = Number(split[0])
+      const num2 = Number(split[1])
+      const process = Math.pow(num1, num2)
+      const format = process.toLocaleString('en-EN')
+
+      return display.value = format
+    }
+
+    const process = eval(display.value)
+    const format = process.toLocaleString('en-EN')
 
     return display.value = format
   } catch (err) {
