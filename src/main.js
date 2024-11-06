@@ -1,3 +1,5 @@
+document.getElementById('clear_all').style.visibility = 'hidden'
+
 let display = document.querySelector('#display')
 let input = ''
 let equal_button_clicked = false
@@ -52,7 +54,6 @@ const operasiAritmatika = () => {
     }, 1000)
   }
 }
-document.getElementById('clear_all').style.visibility = 'hidden'
 
 const spasiMundur = () => {
   if (!equal_button_clicked) {
