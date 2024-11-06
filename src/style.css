@@ -3,11 +3,13 @@
 :root {
   --background-color: #eaeaea;
   --border-area-input: #000000;
-  --input-number-background-color: #2e2e2e;
+  --input-operator-top-button-color: #2e2e2e;
   --input-number-color: #ffffff;
-  --input-operator-background-color: #d58700;
+  --input-number-background-color: #5a5757;
+  --input-operator-left-background-color: #d58700;
   --equal-input-color: #3c5b90;
   --clear-backspace-input-color: #e30202;
+  --display-background-color: #2a2b35;
 }
 
 * {
@@ -121,7 +123,12 @@ input[value="/"] {
   grid-row: 1;
 }
 
-input[value="C"] {
+input[value="CA"] {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+input[value="CE"] {
   grid-column: 1;
   grid-row: 1;
 }
@@ -152,9 +159,9 @@ input[value="<-"] {
 }
 
 .input input {
-  font-size: 20px;
+  font-size: 16px;
   padding: 18px 28px;
-  background-color: #5a5757;
+  background-color: var(--input-number-background-color);
   color: var(--input-number-color);
   border: none;
   text-align: center;
@@ -177,31 +184,24 @@ input[value="/"],
 input[value=")"],
 input[value="("],
 input[value="="] {
-  background-color: var(--input-operator-background-color);
+  background-color: var(--input-operator-left-background-color);
 }
 
 input[value="%"],
 input[value="^"],
-input[value="C"] {
-  background-color: var(--input-number-background-color);
+input[value="CE"],
+input[value="CA"] {
+  background-color: var(--input-operator-top-button-color);
 }
 
-/* 
-input[value="="] {
-  background-color: var(--equal-input-color);
-} */
-
-/* input[value="<-"] {
-  background-color: var(--clear-backspace-input-color);
-} */
-
-.layar_hasil {
+.display {
   text-align: right;
   font-size: 40px;
   width: 290px;
   height: 78px;
-  padding: 20px 10px 0 0;
+  padding: 28px 10px 0 0;
   border: none;
-  background-color: #2a2b35;
+  outline: none;
+  background-color: var(--display-background-color);
   color: var(--background-color);
 }

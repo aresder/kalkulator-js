@@ -15,7 +15,7 @@
       <h1>Kalkulator Javascript</h1>
       <small><i>Format angka dalam English (en-EN)</i></small>
     </div>
-    <input type="text" id="layar_hasil" class="layar_hasil" placeholder="0">
+    <input type="text" id="display" class="display" placeholder="0" readonly>
     <div class="input">
       <input type="button" value="1" onclick="tampilkanKeLayar('1')">
       <input type="button" value="2" onclick="tampilkanKeLayar('2')">
@@ -38,9 +38,9 @@
       <input type="button" value="-" onclick="tampilkanKeLayar('-')">
       <input type="button" value="+" onclick="tampilkanKeLayar('+')">
 
-      <input type="button" value="=" onclick="operasiAritmatika()">
-      <input type="button" value="C" onclick="reset()">
-      <!-- <input type="button" value="<-" onclick="spasiMundur()"> -->
+      <input id="equals" type="button" value="=" onclick="operasiAritmatika()">
+      <input id="clear_all" value="CA" type="button" onclick="reset()">
+      <input id="clear" value="CE" type="button" onclick="spasiMundur()">
     </div>
   </div>
 </body>
