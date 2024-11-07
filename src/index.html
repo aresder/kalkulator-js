@@ -17,30 +17,30 @@
     </div>
     <input type="text" id="display" class="display" placeholder="0" readonly>
     <div class="input">
-      <input type="button" value="1" onclick="tampilkanKeLayar('1')">
-      <input type="button" value="2" onclick="tampilkanKeLayar('2')">
-      <input type="button" value="3" onclick="tampilkanKeLayar('3')">
-      <input type="button" value="4" onclick="tampilkanKeLayar('4')">
-      <input type="button" value="5" onclick="tampilkanKeLayar('5')">
-      <input type="button" value="6" onclick="tampilkanKeLayar('6')">
-      <input type="button" value="7" onclick="tampilkanKeLayar('7')">
-      <input type="button" value="8" onclick="tampilkanKeLayar('8')">
-      <input type="button" value="9" onclick="tampilkanKeLayar('9')">
-      <input type="button" value="0" onclick="tampilkanKeLayar('0')">
-      <input type="button" value="." onclick="tampilkanKeLayar('.')">
+      <input type="button" value="1" onclick="addNumberToDisplay('1')">
+      <input type="button" value="2" onclick="addNumberToDisplay('2')">
+      <input type="button" value="3" onclick="addNumberToDisplay('3')">
+      <input type="button" value="4" onclick="addNumberToDisplay('4')">
+      <input type="button" value="5" onclick="addNumberToDisplay('5')">
+      <input type="button" value="6" onclick="addNumberToDisplay('6')">
+      <input type="button" value="7" onclick="addNumberToDisplay('7')">
+      <input type="button" value="8" onclick="addNumberToDisplay('8')">
+      <input type="button" value="9" onclick="addNumberToDisplay('9')">
+      <input type="button" value="0" onclick="addNumberToDisplay('0')">
+      <input type="button" value="." onclick="addNumberToDisplay('.')">
 
-      <!-- <input type="button" value="(" onclick="tampilkanKeLayar('(')">
-      <input type="button" value=")" onclick="tampilkanKeLayar(')')"> -->
-      <input type="button" value="%" onclick="tampilkanKeLayar('%')">
-      <input type="button" value="^" onclick="tampilkanKeLayar('^')">
-      <input type="button" value="/" onclick="tampilkanKeLayar('/')">
-      <input type="button" value="*" onclick="tampilkanKeLayar('*')">
-      <input type="button" value="-" onclick="tampilkanKeLayar('-')">
-      <input type="button" value="+" onclick="tampilkanKeLayar('+')">
+      <!-- <input type="button" value="(" onclick="addNumberToDisplay('(')">
+      <input type="button" value=")" onclick="addNumberToDisplay(')')"> -->
+      <input type="button" value="%" onclick="addNumberToDisplay('%')">
+      <input type="button" value="^" onclick="addNumberToDisplay('^')">
+      <input type="button" value="/" onclick="addNumberToDisplay('/')">
+      <input type="button" value="*" onclick="addNumberToDisplay('*')">
+      <input type="button" value="-" onclick="addNumberToDisplay('-')">
+      <input type="button" value="+" onclick="addNumberToDisplay('+')">
 
-      <input id="equals" type="button" value="=" onclick="operasiAritmatika()">
-      <input id="clear_all" value="CA" type="button" onclick="reset()">
-      <input id="clear" value="CE" type="button" onclick="spasiMundur()">
+      <input id="equals" type="button" value="=" onclick="mathOperation()">
+      <input id="clear_all" type="button" value="CA" onclick="clearAll()">
+      <input id="clear" type="button" value="CE" onclick="backspace()">
     </div>
   </div>
 </body>
