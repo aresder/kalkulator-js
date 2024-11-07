@@ -1,11 +1,18 @@
-document.getElementById('clear_all').style.visibility = 'hidden'
-
+let clear_button = document.querySelector('#clear')
+let clear_all_button = document.querySelector('#clear_all')
 let display = document.querySelector('#display')
-let input = ''
+let user_input = ''
 let equal_button_clicked = false
 
-const dinamisInput = (input) => {
-  display.value = input
+display.addEventListener('input', () => {
+  alert('Jangan hapus readonlynya dong')
+  display.value = ''
+})
+
+clear_all_button.style.visibility = 'hidden'
+
+const dynamicFontSizeDisplay = (user_input) => {
+  display.value = user_input
 
   let maxFontSize = 40;
   let minFontSize = 16;
@@ -17,24 +24,25 @@ const dinamisInput = (input) => {
   }
 }
 
-const tampilkanKeLayar = (value) => {
-  let hasil = display.value
-  input = hasil
-  if (hasil.includes(',')) input = hasil.replace(/,/g, '')
+const addNumberToDisplay = (value) => {
+  let resultDisplay = display.value
+  user_input = resultDisplay
+  if (resultDisplay.includes(',')) user_input = resultDisplay.replace(/,/g, '')
 
-  dinamisInput(input += value)
+  dynamicFontSizeDisplay(user_input += value)
 }
 
-const operasiAritmatika = () => {
+const mathOperation = () => {
   try {
     equal_button_clicked = true
-    document.getElementById('clear').style.visibility = 'hidden'
-    document.getElementById('clear_all').style.visibility = 'visible'
+    clear_button.style.visibility = 'hidden'
+    clear_all_button.style.visibility = 'visible'
 
     if (display.value.includes('%')) {
-      const num1 = display.value.split('%')[0]
-      const num2 = display.value.split('%')[1].slice(1)
-      const operator = display.value.split('%')[1][0]
+      const split = display.value.split('%')
+      const num1 = split[0]
+      const num2 = split[1].slice(1)
+      const operator = split[1][0]
       const percent = num1 / 100
       const operation = Number(percent) + operator + Number(num2)
       const process = eval(operation)
@@ -62,24 +70,24 @@ const operasiAritmatika = () => {
     display.value = ''
     display.placeholder = 'err'
     setTimeout(() => {
-      reset()
+      clearAll()
     }, 1000)
   }
 }
 
-const spasiMundur = () => {
+const backspace = () => {
   if (!equal_button_clicked) {
     display.value = display.value.slice(0, -1)
   }
 }
 
-const reset = () => {
-  document.getElementById('clear').style.visibility = 'visible'
-  document.getElementById('clear_all').style.visibility = 'hidden'
+const clearAll = () => {
+  clear_button.style.visibility = 'visible'
+  clear_all_button.style.visibility = 'hidden'
   if (equal_button_clicked) {
     display.value = ''
     display.placeholder = '0'
-    input = ''
+    user_input = ''
     display.style.removeProperty('font-size')
     equal_button_clicked = false
   }
