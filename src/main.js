@@ -34,34 +34,15 @@ const addNumberToDisplay = (value) => {
 
 const mathOperation = () => {
   try {
+    let value = display.value
     equal_button_clicked = true
     clear_button.style.visibility = 'hidden'
     clear_all_button.style.visibility = 'visible'
+    
+    if (value.includes('^')) value = value.replace('^', '**')
+    if (value.includes('%')) value = value.replace('%', '/100')
 
-    if (display.value.includes('%')) {
-      const split = display.value.split('%')
-      const num1 = split[0]
-      const num2 = split[1].slice(1)
-      const operator = split[1][0]
-      const percent = num1 / 100
-      const operation = Number(percent) + operator + Number(num2)
-      const process = eval(operation)
-      const format = process.toLocaleString('en-EN')
-
-      return display.value = format
-    }
-
-    if (display.value.includes('^')) {
-      const split = display.value.split('^')
-      const num1 = Number(split[0])
-      const num2 = Number(split[1])
-      const process = Math.pow(num1, num2)
-      const format = process.toLocaleString('en-EN')
-
-      return display.value = format
-    }
-
-    const process = eval(display.value)
+    const process = eval(value)
     const format = process.toLocaleString('en-EN')
 
     return display.value = format
